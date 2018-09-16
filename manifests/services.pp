@@ -7,6 +7,8 @@ class php_fpm::services (
           enable  => true,
           restart => '/usr/bin/php7.0 -l -f /etc/php/7.0/fpm/php-fpm.conf && systemctl reload php7.0-fpm',
           #require => File['/etc/ssh/sshd_config'],
+					# dépendances pour ajouter des utilisateurs particuliers
+					require => Class["accounts"],
         }
     }
 }
