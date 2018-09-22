@@ -1,4 +1,4 @@
-class php_fpm (
+class php_fpm {
         
 	include php_fpm::install
 	include php_fpm::install_modules
