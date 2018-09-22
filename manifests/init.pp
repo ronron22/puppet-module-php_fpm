@@ -1,8 +1,8 @@
 class php_fpm (
-        $nodename = hiera('nodename'),
-        $php_fpm_package = hiera('php_fpm_package'),
-        ) {
-        contain ::php_fpm::install
-        contain ::php_fpm::install_modules
-        contain ::php_fpm::configure
+        
+	include php_fpm::install
+	include php_fpm::install_modules
+	include php_fpm::config
+	include php_fpm::service
+
 }

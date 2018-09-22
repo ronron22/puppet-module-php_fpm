@@ -1,11 +1,11 @@
 class php_fpm::install (
-    $nodename           = hiera('nodename'),
-    $php_fpm_package    = hiera('php_fpm_package'),
-    ) {
 
-        include php_fpm::services
+	$php_fpm_package    = hiera('php_fpm_package'),
+
+	) inherits php_fpm {
         
-        package { "$php_fpm_package": 
-          ensure  =>  installed,
-        }
+		package { "$php_fpm_package": 
+			ensure  =>  installed,
+		}
+
 }
