@@ -1,4 +1,4 @@
-class php_fpm::services (
+class php_fpm::service (
 
 	$service_name   = hiera('service_name'),
 	$service_enable = hiera('service_enable'),

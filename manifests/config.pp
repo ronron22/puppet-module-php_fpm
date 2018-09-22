@@ -1,4 +1,4 @@
-class php_fpm::configure (
+class php_fpm::config (
 
 	$nodename = hiera('nodename'),
 	$configuration_directory = hiera('configuration_directory'),
